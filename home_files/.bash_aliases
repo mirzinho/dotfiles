@@ -1,2 +1,2 @@
 
-alias hiring='./hiring.sh'
+alias hiring='~/hiring.sh'
