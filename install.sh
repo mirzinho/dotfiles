@@ -4,10 +4,8 @@
 sudo curl -L https://github.com/axonasif/build-static-tmux/releases/latest/download/tmux.linux-amd64.stripped -o /usr/bin/tmux
 sudo chmod +x /usr/bin/tmux
 
-# Auto start tmux session
 current_dir="$(cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd)"
 dotfiles_source="${current_dir}/home_files"
-
 # Symlink dotfiles
 while read -r file; do
 
@@ -24,6 +22,6 @@ while read -r file; do
 
 done < <(find "${dotfiles_source}" -type f)
 
+sudo chmod +x ./hiring.sh
 
 git config --global push.default current
-
