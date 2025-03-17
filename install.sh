@@ -23,5 +23,6 @@ while read -r file; do
 done < <(find "${dotfiles_source}" -type f)
 
 sudo chmod +x ./hiring.sh
+sudo chmod +x ./bob.sh
 
 git config --global push.default current
