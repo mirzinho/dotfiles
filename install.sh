@@ -24,5 +24,6 @@ done < <(find "${dotfiles_source}" -type f)
 
 sudo chmod +x ./hiring.sh
 sudo chmod +x ./bob.sh
+sudo chmod +x ./openmod.sh
 
 git config --global push.default current
