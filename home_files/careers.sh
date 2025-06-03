@@ -1,9 +1,20 @@
 #!/usr/bin/env sh
+#
+# Resolve the sub-domain from either an environment variable or the first
+# positional argument.
+#
+#   subdomain=bob ./careers.sh     # via env-var
+#   ./careers.sh bob               # via 1st arg
+#   careers bob                    # after you add the alias below
+#
+
+subdomain="${subdomain:-$1}"
 
 # Define the domain
 # Check if the SUBDOMAIN variable is set
 if [ -z "$subdomain" ]; then
     echo "❌ Error: SUBDOMAIN environment variable is not set!"
+    echi "Usage: careers bob"
     echo "Usage: subdomain=bob ./careers.sh"
     exit 1
 fi
