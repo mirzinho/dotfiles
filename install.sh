@@ -22,6 +22,9 @@ while read -r file; do
 
 done < <(find "${dotfiles_source}" -type f)
 
+echo "📦 Installing bind (for dig)..."
+brew install bind
+
 sudo chmod +x ./hiring.sh
 sudo chmod +x ./bob.sh
 sudo chmod +x ./openmod.sh
