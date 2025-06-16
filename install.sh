@@ -30,4 +30,6 @@ sudo chmod +x ./bob.sh
 sudo chmod +x ./openmod.sh
 sudo chmod +x ./careers.sh
 
+export GP_EXTERNAL_BROWSER="/ide/bin/remote-cli/gitpod-code --openExternal"
+
 git config --global push.default current
